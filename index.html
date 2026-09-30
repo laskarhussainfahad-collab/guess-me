@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f4f0e8">
+    <title>Word Sprint</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <header class="topbar">
+        <a class="brand" href="#" aria-label="Word Sprint home"><span>WORD</span><i> / </i>SPRINT<span
+                class="brand-dot">.</span></a>
+        <div class="score" aria-live="polite"><span>YOUR POINTS</span><strong id="score">0</strong></div>
+    </header>
+
+    <main>
+        <section class="intro">
+            <div>
+                <p class="eyebrow">A LITTLE WORD CHALLENGE</p>
+                <h1>Find the missing word<span>.</span></h1>
+            </div>
+            <p class="instructions">Read the clue, fill in the blank, and build your score one word at a time.</p>
+        </section>
+
+        <nav class="levels" aria-label="Choose a difficulty">
+            <button class="level active" data-level="easy" aria-pressed="true"><span>01</span> Easy</button>
+            <button class="level" data-level="medium" aria-pressed="false"><span>02</span> Medium</button>
+            <button class="level" data-level="hard" aria-pressed="false"><span>03</span> Hard <b>→ EXTREME</b></button>
+        </nav>
+
+        <section class="game" aria-label="Word puzzle">
+            <aside class="progress-panel">
+                <p class="eyebrow" id="level-name">EASY RUN</p>
+                <div class="round"><strong id="round">01</strong><span>/ 20<br>WORDS</span></div>
+                <div class="progress-track"><span id="progress"></span></div>
+                <p class="stage-label">CURRENT STAGE <strong id="stage">Warm-up</strong></p>
+                <div class="points-note"><span class="spark">✳</span>
+                    <p>Correct answer<br><strong>+10 points</strong></p>
+                </div>
+            </aside>
+
+            <div class="puzzle">
+                <div class="puzzle-top"><span class="clue-label">YOUR CLUE</span><span class="word-length"
+                        id="word-length">5 LETTERS</span></div>
+                <p class="clue" id="clue"></p>
+                <form id="answer-form" autocomplete="off">
+                    <label class="sr-only" for="answer">Type the word</label>
+                    <input id="answer" name="answer" type="text" placeholder="Type the word..." spellcheck="false"
+                        autocapitalize="none" required>
+                    <div class="actions">
+                        <button class="hint-button" id="hint" type="button"><span aria-hidden="true">✳</span> Hint
+                            <small>−5 PTS</small></button>
+                        <button class="submit-button" id="submit" type="submit">Check word <span
+                                aria-hidden="true">↗</span></button>
+                    </div>
+                </form>
+                <p class="feedback" id="feedback" role="status" aria-live="polite"></p>
+            </div>
+        </section>
+        <footer><span>TAKE YOUR TIME. TRUST YOUR BRAIN.</span><span>60 WORDS · 3 LEVELS</span></footer>
+    </main>
+</body>
+
+</html>
